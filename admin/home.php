@@ -5,7 +5,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>System of the World - Controle de Cursos</title>
+    <title>Cursos Online - Controle de Cursos</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="home.php">
-            System of the World
+            <img src="imagens/logoMenu.png" alt="Logo do Site" id="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -73,7 +73,7 @@
         </main>
 
         <footer>
-            <p>System of the World - Developed with <i class ="fa fa-heart-o"></i> by Giovanni</p>
+            <p>Cursos Online - Developed with <i class ="fa fa-heart-o"></i> by Giovanni</p>
         </footer>
 </body>
 </html>

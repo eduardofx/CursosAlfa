@@ -27,6 +27,13 @@
     <label for="curriculo">Currículo do Professor</label>
     <textarea name="curriculo" class="form-control" rows="5" required data-parsley-required-message="Preencha o currículo"></textarea>
     <br>
+    
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="ativo">
+        <label class="form-check-label" for="ativo">O professor é ativo?</label>
+    </div>
+    <br>
+    
 
     <button type="submit" class="btn btn-success">Gravar/Alterar Cadastro</button>
 </form>

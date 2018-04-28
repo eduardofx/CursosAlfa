@@ -37,7 +37,6 @@
             //se der certo
             include "app/conecta.php";
 
-
             $sql = "select * from usuario where login = ? limit 1";
             $consulta = $pdo->prepare($sql);
             //passar parametro do login

@@ -59,3 +59,26 @@ label {
   margin: 10px 0px; }
 
 /*# sourceMappingURL=style.css.map */
+
+#logo {
+  width: 50px;
+}
+
+footer {
+  background: #fff;
+  padding: 10px;
+}
+
+footer p {
+  text-align: center;
+}
+
+.principal {
+  padding: 20%;
+}
+
+.conteudo a{
+  font-size: 20px;
+  color: #fff;
+
+}
