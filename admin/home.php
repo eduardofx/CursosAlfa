@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cursos Online - Controle de Cursos</title>
+    <link rel="icon" href="imagens/logoMenu.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">

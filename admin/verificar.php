@@ -50,9 +50,9 @@
             if (empty ($dados->id)){
                 echo "<script>alert('Usuário não encontrado');history.back();</script>";
             }else if($dados->ativo !="Sim"){
-                echo "<script>alert('Este usuário não está ativo, seu otario');history.back();</script>";
+                echo "<script>alert('Este usuário não está ativo.');history.back();</script>";
             }else if (!password_verify($senha, $dados->senha)){
-                echo "<script>alert('Senha incorreta');history.back();</script>";
+                echo "<script>alert('Senha incorreta.');history.back();</script>";
             }else{
                 $_SESSION["sistema"] = array("id"=>$dados->id, "login"=>$dados->login, "nome"=>$dados->nome);
 

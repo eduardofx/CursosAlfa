@@ -11,7 +11,7 @@
     <script type="text/javascript" src="js/parsley.min.js"></script>
 </head>
 <body>
-    <div id="login">
+    <div id="loginIndex">
         <img src="imagens/logo.png" alt="Logo do site">
         <form name="form1" method="post" action="verificar.php" data-parsley-validate>
             <label for="login">Login</label>
