@@ -31,11 +31,12 @@
 
         include "./app/conecta.php";
 
-        $sql = "INSERT INTO usuario (nome, email, login, senha, ativo) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO usuario (id, nome, email, login, senha, ativo) VALUES (NULL, ?, ?, ?, ?, ?)";
         $consulta = $pdo->prepare($sql);
         $consulta->bindParam(1, $nome);
         $consulta->bindParam(2, $email);
-        $consulta->bindParam(':user', $loginUsuario, PDO::PARAM_STR);//special thanks for Ed.Kawassaki-kun!
+        //$consulta->bindParam(3, $loginUsuario );
+        $consulta->bindParam(3, $loginUsuario, PDO::PARAM_STR); //special thanks for eduardofx, he get to me PDO::PARAM_STR haha ^^
         $consulta->bindParam(4, $senhaUsuario);
         $consulta->bindParam(5, $ativo);
 
@@ -44,9 +45,7 @@
             echo "Usuário cadastrado com sucesso";
         }
         else{
-            echo "Erro ao realizar cadastro";
-            
+            echo "Erro ao realizar cadastro";   
         }
-        $sql->getMessage();
-        exit();
+
 ?>

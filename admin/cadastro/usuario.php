@@ -4,7 +4,7 @@
         
     }
 ?>
-<h1>Cadastro de Professor</h1>
+<h1>Cadastro de Usuário</h1>
 
 <form name="form1" class="" method="post" action="home.php?op=salvar&pg=usuario" data-parsley-validate enctype="multipart/form-data">
 
