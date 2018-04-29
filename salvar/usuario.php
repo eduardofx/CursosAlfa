@@ -1,47 +1,32 @@
 <?php
-        if(!isset($_SESSION["sistema"]["id"])){
+        include "./app/conecta.php";
+
+        if(!isset($_SESSION["sistema"]["id"]))
+        {
             header("location: ./index.php");
-            
         }
 
-        // resgatar os dados do ./cadastro/professor.php
-        if(isset ($_POST["nome"]))
-            $nome = trim ($_POST["nome"]);
 
-        if(isset ($_POST["email"]))
-            $email = trim ($_POST["email"]);
+        $senhaUsuario = password_hash($_POST["senhaUsuario"], PASSWORD_DEFAULT);
 
-        if(isset ($_POST["loginUsuario"]))
-            $loginUsuario = trim ($_POST["loginUsuario"]);
-
-        if(isset ($_POST["senhaUsuario"])){
-            $senhaUsuario = trim ($_POST["senhaUsuario"]);
-        }
-
-        $senhaUsuario = password_hash($senhaUsuario, PASSWORD_DEFAULT);
-
-        if(isset ($_POST["ativo"])){
-            $ativo = $_POST["ativo"];
+        if(isset ($_POST["ativo"]))
+        {
             $ativo = "Sim";
         }else{
             $ativo = "Nao";
         }
 
-        // fim do resgate
-
-        include "./app/conecta.php";
-
         $sql = "INSERT INTO usuario (id, nome, email, login, senha, ativo) VALUES (NULL, ?, ?, ?, ?, ?)";
         $consulta = $pdo->prepare($sql);
-        $consulta->bindParam(1, $nome);
-        $consulta->bindParam(2, $email);
-        //$consulta->bindParam(3, $loginUsuario );
-        $consulta->bindParam(3, $loginUsuario, PDO::PARAM_STR); //special thanks for eduardofx, he get to me PDO::PARAM_STR haha ^^
-        $consulta->bindParam(4, $senhaUsuario);
+        $consulta->bindParam(1,  trim($_POST["nome"]), PDO::PARAM_STR);
+        $consulta->bindParam(2,  trim($_POST["email"]), PDO::PARAM_STR);
+        $consulta->bindParam(3,  trim($_POST["loginUsuario"]), PDO::PARAM_STR); //special thanks for eduardofx, he get to me PDO::PARAM_STR haha ^^
+        $consulta->bindParam(4, trim($senhaUsuario), PDO::PARAM_STR);
         $consulta->bindParam(5, $ativo);
 
 
-        if ($consulta->execute()){
+        if ($consulta->execute())
+        {
             echo "Usuário cadastrado com sucesso";
         }
         else{
