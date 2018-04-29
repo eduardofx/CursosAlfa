@@ -25,7 +25,7 @@
     <br>
 
     <label for="senhaUsuario">Senha: </label>
-    <input type="password" name="senhaUsuario" required class="form-control" required data-parsley-required-message="Preencha o cargo do usuário">
+    <input type="password" name="senhaUsuario" required class="form-control" required data-parsley-required-message="Preencha a senha">
     <br>
 
     <div class="form-check">
